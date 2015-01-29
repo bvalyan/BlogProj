@@ -1,0 +1,22 @@
+body{
+        background-image: url("http://wallpaperhosting.co/wp-content/uploads/2014/12/django-unchained-movie-cowboy-silhouettes-artwork-hd-wallpaper-background-uhd-2k-4k-5k-2015-2016-tablet-phone-mobile-pc-computer-Art-Hosting.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center; 
+        background-size:cover;
+        background-color: #fdfdfd;
+        color: #2e2e2e;
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+        line-height: 28px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+    div.content{
+        border: 1px solid #fbfbfb;
+        background-color: #fff;
+        max-width: 640px;
+        width: 96%;
+        padding: 2%;
+        margin: 28px  auto;
+    }
