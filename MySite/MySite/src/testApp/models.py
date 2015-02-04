@@ -22,7 +22,7 @@ def __unicode__(self):
             return u'%s' % self.title
      
 def get_absolute_url(self):
-            return reverse('blog.views.post', args=[self.slug])
+            return reverse('testApp.views.post', args=[self.slug])
 class Comment(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     author = models.CharField(max_length=60)

@@ -41,6 +41,7 @@ INSTALLED_APPS = (
         'django.contrib.staticfiles',
         'django.contrib.admin',
         'testApp'
+        
     )
 
 MIDDLEWARE_CLASSES = (
@@ -83,7 +84,7 @@ USE_I18N = True
 USE_L10N = True
 
 STATICFILES_DIRS = (
-    '/Users/Brandon/workspace/MySite/src/Static',
+     os.path.join(BASE_DIR, 'static').replace('\\','/'),
     )
 
 
@@ -91,3 +92,5 @@ STATICFILES_DIRS = (
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'StatRoot')
