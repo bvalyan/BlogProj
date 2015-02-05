@@ -35,7 +35,7 @@ def post_form_upload(request):
         if form.is_valid():
             content = form.cleaned_data['content']
             return HttpResponseRedirect(reverse('post_detail',
-                                                kwargs={'post_id': post.id}))
+                                                kwargs={'post': post}))
  
     return render(request, 'blog/post_form_upload.html', {
         'form': form,
@@ -50,10 +50,7 @@ def post_form_upload(request):
    
           # If data is valid, proceeds to create a new post and redirect the user
           if form.is_valid():
-              content = form.cleaned_data['content']
-              return HttpResponseRedirect(reverse('post_detail',
-                                                  kwargs={'post_id': post.id}))
-   
+              content = form.cleaned_data['content']  
       return render(request, 'blog/id_form_upload.html', {
           'form': form,
       })
