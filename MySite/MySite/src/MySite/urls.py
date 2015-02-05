@@ -9,7 +9,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
         url(r'^admin/', include(admin.site.urls)),
         url(r'^$', 'testApp.views.index'),
-        url(r'^(?P<slug>[\w\-]+)/$', 'testApp.views.post'),
+        url(r'^(?P<slug>[\w\-]+)/$', 'testApp.views.post', name='post_detail'),
         url(r"^add_comment/(\d+)/$", "add_comment"),
         url(r'^comments/', include('django.contrib.comments.urls')),
         url(r'^post/form_upload.html$',
