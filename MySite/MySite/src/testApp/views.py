@@ -34,8 +34,8 @@ def post_form_upload(request):
         # If data is valid, proceeds to create a new post and redirect the user
         if form.is_valid():
             content = form.cleaned_data['content']
-            return HttpResponseRedirect(reverse('post_detail',
-                                                kwargs={'post_id': post.id}))
+            return HttpResponseRedirect('post_detail',
+                                                kwargs={'post_id': post.id})
  
     return render(request, 'blog/post_form_upload.html', {
         'form': form,
