@@ -1,0 +1,36 @@
+ {% extends 'base.html' %}
+     
+     
+    {% block title %} The Front End {% endblock %}
+     
+    {% block content %}
+        <h1> 
+            The Front End
+
+       </h1>
+	<div align="center">
+	<h3>
+	"The blog for everyone"
+	</h3>
+	<h2>
+	<a href = "http://dutch.mathcs.emory.edu:8007/post/form_upload.html">Add Post</a>
+	</h2>
+	</div>
+        {% for post in posts %}
+        <div class="post">
+            <h2>
+                <a href="{{post.slug}}">
+                    {{post.title}}
+                </a>
+            </h2>
+            <p>{{post.description}}</p>
+	    <p>{{post.author}}</p>
+            <p>
+                Posted on
+                <time datetime="{{post.created|date:"c"}}">
+                {{post.created|date}}
+                </time>
+            </p>
+        </div>
+        {% endfor %}
+    {% endblock %}
